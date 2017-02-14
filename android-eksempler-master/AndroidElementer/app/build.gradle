@@ -1,0 +1,46 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 24
+    buildToolsVersion '25.0.2'
+    defaultConfig {
+//      app'ens pakkenavn - dens unikke ID på telefonen
+        applicationId "dk.nordfalk.android.elementer"
+//      denne app fungerer på telefoner med Android 2.3.3 (API 9) og frem
+        minSdkVersion 9
+//        targetSdkVersion 22
+//      men den er beregnet til Android 7.0 (API 24)
+        targetSdkVersion 24
+
+        versionCode 58
+        versionName '2.5.1  11.okt 2016'
+
+//      dette giver en hurtigere build, men med højere hukommelsesforbrug
+        /*
+        dexOptions {
+            javaMaxHeapSize "2g"
+        }
+        */
+    }
+    buildTypes {
+        release {
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+    productFlavors {
+    }
+    // i assets/ skal, udover src/main/assets, også være al kildekoden og alle resurserne (src/main)
+    sourceSets { main { assets.srcDirs = ['src/main/assets', 'src/main'] } }
+}
+dependencies {
+    // Støttebiblioteker - se http://developer.android.com/tools/support-library/
+    // Understøttelse af fragmenter
+    compile 'com.android.support:support-v4:24.2.1'
+    // Understøttelse af actionbar/Toolbar
+    compile 'com.android.support:appcompat-v7:24.2.1'
+    // Understøttelse af venstremenu
+    compile 'com.android.support:design:24.2.1'
+    //    compile 'com.google.android.gms:play-services:9.6.1'
+    compile 'com.google.android.gms:play-services-auth:9.6.1'
+    compile 'com.google.android.gms:play-services-location:9.6.1'
+}

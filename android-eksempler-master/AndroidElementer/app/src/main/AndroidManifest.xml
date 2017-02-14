@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          android:installLocation="auto"
+    package="dk.nordfalk.android.elementer" >
+
+    <!-- tilladelser -->
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.READ_CALL_LOG" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+
+
+    <uses-permission android:name="com.google.android.gms.permission.ACTIVITY_RECOGNITION" />
+
+    <!--
+      Undgå at appen bliver utilgængelig for visse enheder i Android Marked. Se
+      http://developer.android.com/guide/topics/manifest/uses-feature-element.html
+    -->
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.location"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.location.gps"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.location.network"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.touchscreen"
+        android:required="false" />
+    <uses-feature
+        android:name="android.software.live_wallpaper"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.screen.portrait"
+        android:required="false" />
+    <uses-feature
+        android:name="android.software.app_widgets"
+        android:required="false" />
+
+    <application
+        android:name="lekt04_arkitektur.MinApp"
+        android:theme="@style/Theme.AppCompat"
+        android:icon="@drawable/logo">
+
+        <!--
+          aktiviteter som ikke kan ses fra startskærmen men som kan kaldes
+          internt i programmet
+        -->
+
+        <activity android:name="lekt01_views.BenytEnKnap" />
+        <activity android:name="lekt01_views.BenytKnapperProgrammatisk" />
+        <activity android:name="lekt01_views.BenytKnapperDeklarativ" />
+        <activity android:name="lekt01_views.BenytWebView" />
+        <activity android:name="lekt01_views.ByvejrProgrammatisk" />
+        <activity android:name="lekt01_views.ByvejrDeklarativ" />
+        <activity android:name="lekt01_views.BenytHtmlTags" />
+        <activity android:name="lekt01_views.BenytMenuer" />
+        <activity android:name="lekt02_intents.BenytIntents" />
+        <activity android:name="lekt02_intents.BenytIntentsFraGoogle" />
+        <activity
+            android:name="lekt02_intents.BenytIntentsMedResultat"
+            android:screenOrientation="portrait" />
+
+        <!-- Denne aktivitet fanger browsning af URLer der starter med http://javabog.dk/OOP/ -->
+        <activity android:name="lekt02_intents.FangBrowseIntent" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:scheme="http"
+                    android:host="javabog.dk"
+                    android:pathPrefix="/OOP/"
+                    />
+            </intent-filter>
+        </activity>
+        <activity android:name="lekt02_intents.BenytIntentsMedTilladelser" />
+
+        <!--
+             Dette filter fanger tryk på HJEM-knappen
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.HOME"/>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        -->
+        <activity android:name="lekt02_aktiviteter.Velkomst_akt" />
+        <activity android:name="lekt02_aktiviteter.Hovedmenu_akt" />
+        <activity android:name="lekt02_aktiviteter.Hjaelp_akt" />
+        <activity android:name="lekt02_aktiviteter.Indstillinger_akt" />
+        <activity android:name="lekt02_aktiviteter.Spillet_akt" />
+
+        <activity android:name="lekt03_diverse.AfspilLyd" />
+        <activity android:name="lekt03_diverse.AfspilVideo" />
+        <activity android:name="lekt03_diverse.BenytWebView2" />
+        <activity android:name="lekt03_diverse.BenytLayoutInflater" />
+        <activity android:name="lekt03_diverse.BenytMenuer2" />
+        <activity android:name="lekt03_diverse.BenytDialogerOgToasts" />
+        <activity android:name="lekt03_diverse.BenytTekstTilTale" />
+        <activity android:name="lekt03_diverse.Taleeventyr" />
+        <activity android:name="lekt03_net.BenytNetOgAsyncTask" />
+        <activity android:name="lekt03_net.ByvejrAktivitet" />
+        <activity android:name="lekt04_fragmenter.Hovedaktivitet"/>
+        <activity android:name="lekt04_fragmenter.HovedaktivitetMedViewpager"/>
+        <activity android:name="lekt04_arkitektur.NoteAktivitet" />
+        <activity android:name="lekt04_arkitektur.NoteAktivitet2" />
+        <activity android:name="lekt04_lister.BenytListView" />
+        <activity android:name="lekt04_lister.BenytListActivity" />
+        <activity android:name="lekt04_lister.BenytGallery" />
+        <activity android:name="lekt04_lister.BenytGridView" />
+        <activity android:name="lekt04_lister.BenytSpinner" />
+        <activity android:name="lekt04_lister.EgetLayoutMedArrayAdapter" />
+
+        <activity android:name="lekt04_lister2.EgetLayoutMedArrayAdapter2" />
+        <activity android:name="lekt04_lister2.EgetLayoutMedArrayAdapter2Spinner" />
+        <activity android:name="lekt04_lister2.EgetLayoutMedBaseAdapter" />
+        <activity android:name="lekt04_lister2.EgetLayoutMedBaseAdapterViewholder" />
+        <activity android:name="lekt04_lister2.EgetLayoutMedBaseAdapterOverskrifter" />
+        <activity android:name="lekt04_lister2.VisAlleAndroidDrawables" />
+        <activity android:name="lekt07_lister3.BenytRecyclerview" />
+
+        <activity android:name="lekt05_grafik.Grafikdemo0" />
+        <activity android:name="lekt05_grafik.Tegneprogram" />
+        <activity android:name="lekt05_grafik.Braetspil" />
+        <activity android:name="lekt05_grafik.FlytbarVejrudsigt" />
+        <activity android:name="lekt05_grafik.Grafikdemo1" />
+        <activity android:name="lekt05_grafik.Grafikdemo2" />
+        <activity android:name="lekt05_grafik.KnapperMedEgenGrafik" />
+        <activity android:name="lekt05_grafik.BenytAnimationer" />
+
+        <!-- android:configChanges gør at aktiviteten selv håndterer skærvendingen, dvs den bliver ikke mere genstartet -->
+        <activity
+            android:name="lekt05_sensorer.VisSensorer"
+            android:screenOrientation="portrait" />
+        <activity android:name="lekt05_grafik.ProgrammatiskLayout2" />
+        <!--
+             android:screenOrientation slår vending af skærmen fra på denne aktivitet
+                android:configChanges="orientation"/>
+        -->
+        <activity
+            android:name="lekt05_sensorer.Kompas"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="lekt05_sensorer.Kompas2"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="lekt05_sensorer.Balancespil"
+            android:screenOrientation="portrait" />
+        <activity android:name="lekt05_sensorer.Stedbestemmelse" />
+        <activity android:name="lekt06_data.CSVParsning" />
+        <activity android:name="lekt06_data.JsonParsning" />
+        <activity android:name="lekt06_data.JsonGenerering" />
+        <activity android:name="lekt06_data.XmlParsning" />
+        <activity android:name="lekt06_data.BenytSQLite" />
+        <activity android:name="lekt06_data.BenytSQLiteOpenHelper" />
+
+        <activity android:name="lekt06_asynkron.Asynk1Handler" />
+        <activity android:name="lekt06_asynkron.Asynk2Thread" />
+        <activity android:name="lekt06_asynkron.Asynk3AsyncTask" />
+        <activity android:name="lekt06_asynkron.Asynk4Korrekt" />
+        <activity android:name="lekt07_fragmenter.BenytMitFragment_akt" />
+        <activity android:name="lekt07_fragmenter.BenytHovedmenu_akt" />
+        <activity android:name="lekt08_providers.VisOpkald" />
+        <activity android:name="lekt08_providers.VisKontakter" />
+        <activity android:name="lekt08_providers.VisKontakterMedListView" />
+
+        <!--
+             provider til at modtage og sende filer. Bruges til:
+              - at modtage billeddata fra kamera-intents
+              - at sende data med et intent via f.eks gmail
+             bemærk at det ikke sikkert, da alle installerede apps kan læse og skrive til billedet
+        -->
+        <provider
+            android:name="lekt08_providers.MinEgenProvider"
+            android:exported="true"
+            android:authorities="dk.nordfalk.android.elementer.MinProvider" />
+        <activity
+            android:name="lekt08_providers.BenytIntentsMedEgenProvider"
+            android:screenOrientation="portrait" />
+
+        <!-- standardløsningen er at bruge FileProvider fra supportbiblioteket -->
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="dk.nordfalk.android.elementer.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/lekt08_fileprovider" />
+        </provider>
+        <activity
+            android:name="lekt08_providers.BenytIntentsMedFileProvider"
+            android:screenOrientation="portrait" />
+
+        <activity android:name="lekt09_recievers.OpdagAppInstallation" />
+        <activity android:name="lekt09_recievers.ModtagSMSer" />
+        <activity android:name="lekt09_recievers.OpdagNetvaerksAEndring" />
+        <activity android:name="lekt09_recievers.BenytAlarmer" />
+        <activity android:name="lekt09_services.BenytService" />
+        <!-- Simpel service der, når startet, forsøger at holde app'en i hukommelsen -->
+        <service android:name="lekt09_services.BaggrundsService" />
+        <!-- Simpel service der, når startet, insisterer på at holde app'en i hukommelsen -->
+        <service android:name="lekt09_services.ForgrundsService" />
+
+        <activity android:name="lekt09_services.BenytIntentService" />
+
+        <service android:name="lekt09_services.MinIntentService" />
+
+        <!-- Levende baggrund på hjemmeskærmen der viser en esperanto-stjerne -->
+        <service
+            android:name="lekt09_levendebaggrund.Esperantotapet"
+            android:permission="android.permission.BIND_WALLPAPER" >
+            <intent-filter>
+                <action android:name="android.service.wallpaper.WallpaperService" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.service.wallpaper"
+                android:resource="@xml/lekt09_levendebaggrund_esperanto" />
+        </service>
+
+        <!-- Levende ikon på hjemmeskærmen der viser hvad klokken er -->
+        <receiver android:name="lekt09_levendeikon.VisKlokkenIkon" >
+   
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/lekt09_levendeikon_visklokken" />
+        </receiver>
+
+        <activity android:name="lekt10_livscyklus.ManglendeKaldTilSuperklasse" />
+        <activity android:name="lekt10_livscyklus.LogAktivitet" />
+        <activity android:name="lekt10_livscyklus.Liv1_singleton" />
+        <activity android:name="lekt10_livscyklus.Liv2_gemIFil" />
+        <activity android:name="lekt10_livscyklus.Liv3_nonConfigurationInstance" />
+        <activity android:name="lekt10_livscyklus.Liv4_bundle" />
+        <activity android:name="lekt10_livscyklus.DialogDerOverleverSkaermvending" />
+
+        <activity android:name="ufaerdigt.BenytIntentsMedResTilladelser" />
+        <activity android:name="ufaerdigt.ByvejrAktivitet2" />
+
+        <activity android:name="lekt20_touchinput.BenytGestureDetector" />
+        <activity android:name="lekt20_touchinput.BenytScaleGestureDetector" />
+        <activity android:name="lekt20_touchinput.BenytMultiTouchController" />
+        <activity android:name="lekt31_venstremenu.BenytVenstremenu" android:theme="@style/Theme.AppCompat" />
+        <activity android:name="lekt32_overgange.AktivitetsovergangBegynd" />
+        <activity android:name="lekt32_overgange.AktivitetsovergangSlut" />
+        <activity android:name="lekt32_overgange.VisFragmentoverrgange" />
+
+        <activity android:name="lekt40_design.ScrollingActivity"
+                  android:theme="@style/AppTheme.NoActionBar"
+                  android:label="Bla bla"/>
+
+        <activity android:name="lekt50_aktivitetsgenkendelse.Aktivitetsgenkendelse_akt" />
+        <receiver android:name="lekt50_aktivitetsgenkendelse.Aktivitetsgenkendelse_reciever" />
+        <activity android:name="lekt50_googlested.Stedplacering_akt" />
+        <service android:name="lekt50_googlested.GeofenceIntentService" />
+        <activity android:name="lekt50_auth.Autorisering_akt" />
+
+        <activity android:name="lekt06_youtube.YoutubeRssParsning" />
+        <activity
+            android:name="lekt06_youtube.BenytVideoView"
+            android:configChanges="orientation" />
+
+        <!-- aktivitet som kan ses fra startskærmen -->
+        <activity
+            android:name="dk.nordfalk.aktivitetsliste.Aktivitetsliste3"
+            android:theme="@style/AppTheme"
+            android:label="AndroidElementer" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Jeg skjuler alle aktiviteter der står herunder fra Aktivitetsliste -->
+        <activity android:name="dk.nordfalk.aktivitetsliste.VisKildekodeIWebView" android:theme="@style/Theme.AppCompat"/>
+        <activity android:name="dk.nordfalk.aktivitetsliste.VisKildekode" android:theme="@style/Theme.AppCompat">
+
+            <!-- bruges af metoden VisKildekode.findWebUrl() -->
+            <meta-data
+                android:name="HS_PRÆFIX"
+                android:value="https://github.com/nordfalk/android-eksempler/tree/master/AndroidElementer/app/src/main/" />
+        </activity>
+    </application>
+
+</manifest>
