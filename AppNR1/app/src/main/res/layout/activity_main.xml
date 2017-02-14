@@ -20,23 +20,20 @@
         android:id="@+id/textHeadnigMain" />
 
     <Button
-        android:text="Nr.2"
+        android:text="Nr.1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/button2"
-        android:layout_alignBaseline="@+id/button1"
-        android:layout_alignBottom="@+id/button1"
-        android:layout_toEndOf="@+id/button1"
-        android:layout_marginStart="20dp" />
+        android:layout_marginTop="161dp"
+        android:id="@+id/button1"
+        android:layout_below="@+id/textHeadnigMain"
+        android:layout_alignParentStart="true" />
 
     <Button
-        android:text="Nr.3"
+        android:text="OK"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="24dp"
-        android:id="@+id/button3"
-        android:layout_alignBaseline="@+id/button2"
-        android:layout_alignBottom="@+id/button2"
+        android:id="@+id/buttonOK"
+        android:layout_alignTop="@+id/editTextName"
         android:layout_alignParentEnd="true" />
 
     <EditText
@@ -47,32 +44,18 @@
         android:layout_marginTop="11dp"
         android:id="@+id/editTextName"
         android:hint="Enter your name here"
-        android:layout_below="@+id/textView2"
-        android:layout_alignStart="@+id/textView2" />
+        android:layout_below="@+id/textViewBelowHeading"
+        android:layout_alignStart="@+id/textViewBelowHeading" />
 
-    <Button
-        android:text="OK"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/buttonOK"
-        android:layout_alignTop="@+id/editTextName"
-        android:layout_alignParentEnd="true" />
 
-    <Button
-        android:text="Nr.1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="161dp"
-        android:id="@+id/button1"
-        android:layout_below="@+id/textHeadnigMain"
-        android:layout_alignParentStart="true" />
+
 
     <TextView
         android:text="Please write your name below, and press OK:"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="11dp"
-        android:id="@+id/textView2"
+        android:id="@+id/textViewBelowHeading"
         android:layout_below="@+id/textHeadnigMain"
         android:layout_alignParentStart="true" />
 
@@ -80,7 +63,7 @@
         android:text="Please click on a button:"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/textBelowHeading"
+        android:id="@+id/textViewButtons"
         android:layout_above="@+id/button2"
         android:layout_alignParentStart="true"
         android:layout_marginBottom="12dp" />
@@ -94,6 +77,25 @@
         android:layout_marginBottom="24dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />
+
+    <Button
+        android:text="Nr.2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button2"
+        android:layout_alignBaseline="@+id/button1"
+        android:layout_alignBottom="@+id/button1"
+        android:layout_alignEnd="@+id/editTextName" />
+
+    <Button
+        android:text="Nr.3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="15dp"
+        android:id="@+id/button3"
+        android:layout_alignBaseline="@+id/button2"
+        android:layout_alignBottom="@+id/button2"
+        android:layout_alignParentEnd="true" />
 
 
 </RelativeLayout>

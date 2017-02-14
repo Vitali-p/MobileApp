@@ -34,11 +34,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
         //Get elements by ID, and use by the even. Write to a textfied by ID.
         TextView printToTextView = (TextView) findViewById(R.id.textToScreen);
-        EditText textName = (EditText) findViewById(R.id.editTextName);
-        String persName = textName.toString();
+        String persName = ((EditText) findViewById(R.id.editTextName)).getText().toString();
+       // String persName = textName.getText().toString();
 
         //Write out to terminal. The clicked name of the button.
-        System.out.println("A button " + ((Button)v).getText().toString() + " has been clicked..");
+        System.out.println("A button " + ((Button)v).getText().toString() + " has been clicked..\r\n");
 
         //Get elements by ID, and use them on a even.
         switch (v.getId()) {
@@ -59,18 +59,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
             case R.id.buttonOK: {
                 //Functionality of button OK
-                if(persName == null) {
-                    printToTextView.setText("Please write toy name!");
+                if(persName.equals(null) || persName.equals("")) {
+                    printToTextView.setText("Please write your name!");
                 }
-                else if (persName != null) {
-                    printToTextView.setText("Welcome " + persName);
+                else {
+                    printToTextView.setText("Welcome " + persName +"!");
                 }
             }
             default:
                 //Do nothing.
                 break;
         }
-
+/*
         //Another way to implemt on click, is by listeling for a button even.
         if (v == nr1) {
             //Functionality of button Nr.1
@@ -87,12 +87,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         else if (v == OK) {
             //Functionality of button OK
             if(persName == null) {
-                printToTextView.setText("Please write toy name!");
+                printToTextView.setText(Please write toy name!");
             }
-            else if (persName != null) {
+            else {
                 printToTextView.setText("Welcome " + persName);
             }
         }
+        */
 
     }
 }
