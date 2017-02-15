@@ -1,82 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="5dp"
     tools:context="vitali.appnr1.MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello, this is my first APP!"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true"
-        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
-        android:id="@+id/textHeadnigMain" />
-
     <Button
-        android:text="Nr.1"
+        android:text="Nr.3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="161dp"
-        android:id="@+id/button1"
-        android:layout_below="@+id/textHeadnigMain"
-        android:layout_alignParentStart="true" />
-
-    <Button
-        android:text="OK"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/buttonOK"
-        android:layout_alignTop="@+id/editTextName"
-        android:layout_alignParentEnd="true" />
+        android:id="@+id/button3"
+        android:layout_alignBaseline="@+id/button2"
+        android:layout_alignBottom="@+id/button2"
+        android:layout_toEndOf="@+id/editTextName" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
         android:ems="10"
-        android:layout_marginTop="11dp"
         android:id="@+id/editTextName"
         android:hint="Enter your name here"
         android:layout_below="@+id/textViewBelowHeading"
-        android:layout_alignStart="@+id/textViewBelowHeading" />
-
-
-
-
-    <TextView
-        android:text="Please write your name below, and press OK:"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="11dp"
-        android:id="@+id/textViewBelowHeading"
-        android:layout_below="@+id/textHeadnigMain"
         android:layout_alignParentStart="true" />
 
-    <TextView
-        android:text="Please click on a button:"
+    <Button
+        android:text="Settings"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/textViewButtons"
-        android:layout_above="@+id/button2"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="12dp" />
+        android:id="@+id/buttonSettings"
+        android:layout_alignBaseline="@+id/buttonInstructions"
+        android:layout_alignBottom="@+id/buttonInstructions"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/textViewButtons" />
+
+    <Button
+        android:text="OK"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttonOK"
+        android:layout_below="@+id/textViewBelowHeading"
+        android:layout_toEndOf="@+id/editTextName"
+        android:layout_alignStart="@+id/imageView" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/textToScreen"
-        android:text="..."
-        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-        android:layout_marginBottom="24dp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
+        android:text="Hello, this is my first APP!"
+        android:textAppearance="@style/TextAppearance.AppCompat.Light.SearchResult.Title"
+        android:id="@+id/textHeadnigMain"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@+id/imageView" />
+
+    <TextView
+        android:text="1. Please write your name below, and press OK:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textViewBelowHeading"
+        android:layout_below="@+id/textHeadnigMain"
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@+id/buttonOK"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
 
     <Button
         android:text="Nr.2"
@@ -85,17 +76,85 @@
         android:id="@+id/button2"
         android:layout_alignBaseline="@+id/button1"
         android:layout_alignBottom="@+id/button1"
-        android:layout_alignEnd="@+id/editTextName" />
+        android:layout_centerHorizontal="true" />
 
     <Button
-        android:text="Nr.3"
+        android:text="NR.1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="15dp"
-        android:id="@+id/button3"
-        android:layout_alignBaseline="@+id/button2"
-        android:layout_alignBottom="@+id/button2"
+        android:id="@+id/button1"
+        android:layout_alignTop="@+id/textViewButtons"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="17dp" />
+
+    <Button
+        android:text="Instructions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttonInstructions"
+        android:layout_below="@+id/textViewDisplays"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textToScreen"
+        android:text="................"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:layout_below="@+id/buttonSettings"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@android:drawable/sym_def_app_icon"
+        android:id="@+id/imageView"
+        android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true" />
 
+    <TextView
+        android:text="3. Displays:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textViewDisplays"
+        android:layout_below="@+id/button1"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="2. Please click on a button:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textViewButtons"
+        android:layout_below="@+id/editTextName"
+        android:layout_alignParentStart="true" />
+
+    <WebView
+        android:layout_width="match_parent"
+        android:layout_height="200px"
+        android:id="@+id/webView"
+
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:layout_above="@+id/webView"
+        android:layout_alignParentStart="true"
+        android:id="@+id/editTextURL"
+        android:layout_toStartOf="@+id/buttonOK" />
+
+    <Button
+        android:text="OK"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttonURLok"
+        android:layout_above="@+id/webView"
+        android:layout_toEndOf="@+id/editTextURL"
+        android:layout_alignStart="@+id/buttonOK"
+        android:layout_alignTop="@+id/editTextURL" />
 
 </RelativeLayout>
+
