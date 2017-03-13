@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         //Write out to terminal, the clicked name of the button.
         System.out.println("A button " + ((Button)v).getText().toString() + " has been clicked..\n");
         //Or the same can be done by writing to the intern android log.
-        Log.d("Tag: Click", "Messae:OK!");
+        Log.d("Tag: Click", "Message:OK!");
 
         //Get elements by ID, and use them on a even.
         switch (v.getId()) {
