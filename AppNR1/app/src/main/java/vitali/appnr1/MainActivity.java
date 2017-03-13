@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     Button nr1 = null, nr2 = null, nr3 = null, OK = null, Inst = null, Sett = null, OKurl = null;
     WebView webView;
 
-    //Initiation of User Interface.
+    //Initiation of User Interface of the app.
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
