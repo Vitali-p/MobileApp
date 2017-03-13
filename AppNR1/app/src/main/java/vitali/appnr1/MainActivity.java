@@ -2,6 +2,7 @@ package vitali.appnr1;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.webkit.WebView;
 import android.widget.Button;
@@ -56,7 +57,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         //Write out to terminal, the clicked name of the button.
         System.out.println("A button " + ((Button)v).getText().toString() + " has been clicked..\n");
-
+        //Or the same can be done by writing to the intern android log.
+        Log.d("Tag: Click", "Messae:OK!");
 
         //Get elements by ID, and use them on a even.
         switch (v.getId()) {
@@ -157,6 +159,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
         }
         */
+
+        // Write and use 3 different intents.
 
 
     }
