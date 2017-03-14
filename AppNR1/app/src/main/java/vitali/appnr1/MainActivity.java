@@ -162,6 +162,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         // Write and use 3 different intents.
 
+        // The Implicitte intents used in a extern app.
+
+        // The Eksplicitte intents used in current app.
+
+
 
     }
 }
