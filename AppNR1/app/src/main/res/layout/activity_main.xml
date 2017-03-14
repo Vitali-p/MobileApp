@@ -1,160 +1,339 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingLeft="10dp"
-    android:paddingRight="10dp"
-    android:paddingTop="5dp"
-    tools:context="vitali.appnr1.MainActivity">
+    android:id="@+id/activity_main">
 
-    <Button
-        android:text="Nr.3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/button3"
-        android:layout_alignBaseline="@+id/button2"
-        android:layout_alignBottom="@+id/button2"
-        android:layout_toEndOf="@+id/editTextName" />
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:ems="10"
-        android:id="@+id/editTextName"
-        android:hint="Enter your name here"
-        android:layout_below="@+id/textViewBelowHeading"
-        android:layout_alignParentStart="true" />
+    <TableLayout android:layout_width="wrap_content"  android:layout_height="wrap_content">
 
-    <Button
-        android:text="Settings"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/buttonSettings"
-        android:layout_alignBaseline="@+id/buttonInstructions"
-        android:layout_alignBottom="@+id/buttonInstructions"
-        android:layout_alignParentEnd="true"
-        android:layout_toEndOf="@+id/textViewButtons" />
+        <!-- 1 row for entering name. -->
+        <TableRow>
+            <RelativeLayout>
+                <TextView
+                    android:text="Hello, this is my first APP!"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Light.SearchResult.Title"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_toStartOf="@+id/imageView"
+                    android:id="@+id/textHeadnigMain"/>
 
-    <Button
-        android:text="OK"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/buttonOK"
-        android:layout_below="@+id/textViewBelowHeading"
-        android:layout_toEndOf="@+id/editTextName"
-        android:layout_alignStart="@+id/imageView" />
+                <TextView
+                    android:text="1. Please write your name below, and press OK:"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/textHeadnigMain"
+                    android:layout_toStartOf="@+id/buttonOK"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:id="@+id/textViewBelowHeading" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello, this is my first APP!"
-        android:textAppearance="@style/TextAppearance.AppCompat.Light.SearchResult.Title"
-        android:id="@+id/textHeadnigMain"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true"
-        android:layout_toStartOf="@+id/imageView" />
+                <EditText
+                    android:hint="Enter your name here"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:ems="10"
+                    android:layout_below="@+id/textViewBelowHeading"
+                    android:layout_alignParentStart="true"
+                    android:id="@+id/editTextName"/>
 
-    <TextView
-        android:text="1. Please write your name below, and press OK:"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/textViewBelowHeading"
-        android:layout_below="@+id/textHeadnigMain"
-        android:layout_alignParentStart="true"
-        android:layout_toStartOf="@+id/buttonOK"
-        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+                <ImageView
+                    app:srcCompat="@android:drawable/sym_def_app_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentTop="true"
+                    android:id="@+id/imageView"/>
 
-    <Button
-        android:text="Nr.2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/button2"
-        android:layout_alignBaseline="@+id/button1"
-        android:layout_alignBottom="@+id/button1"
-        android:layout_centerHorizontal="true" />
+                <Button
+                    android:text="OK"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textViewBelowHeading"
+                    android:layout_toEndOf="@+id/editTextName"
+                    android:layout_alignStart="@+id/imageView"
+                    android:id="@+id/buttonOK"/>
 
-    <Button
-        android:text="NR.1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/button1"
-        android:layout_alignTop="@+id/textViewButtons"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="17dp" />
+            </RelativeLayout>
+        </TableRow>
 
-    <Button
-        android:text="Instructions"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/buttonInstructions"
-        android:layout_below="@+id/textViewDisplays"
-        android:layout_alignParentStart="true" />
+        <!-- 2 row for button pres functions. -->
+        <TableRow android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <TextView
+                    android:text="2. Please click on a button:"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textViewButtons" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/textToScreen"
-        android:text="................"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-        android:layout_below="@+id/buttonSettings"
-        android:layout_centerHorizontal="true" />
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="NR.1"
+                    android:id="@+id/button1"
+                    android:layout_below="@+id/textViewButtons"
+                    android:layout_alignParentStart="true" />
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@android:drawable/sym_def_app_icon"
-        android:id="@+id/imageView"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true" />
+                <Button
+                    android:text="Nr.2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/button2"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true" />
 
-    <TextView
-        android:text="3. Displays:"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/textViewDisplays"
-        android:layout_below="@+id/button1"
-        android:layout_alignParentStart="true" />
+                <Button
+                    android:text="Nr.3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/button3"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentEnd="true" />
+            </RelativeLayout>
+        </TableRow>
 
-    <TextView
-        android:text="2. Please click on a button:"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/textViewButtons"
-        android:layout_below="@+id/editTextName"
-        android:layout_alignParentStart="true" />
+        <!-- 3 row for button pres functions of settings or instructor. -->
+        <TableRow android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <TextView
+                    android:text="3. Displays:"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textViewDisplays"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentStart="true" />
 
-    <WebView
-        android:layout_width="match_parent"
-        android:layout_height="200px"
-        android:id="@+id/webView"
+                <Button
+                    android:text="Instructions"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/buttonInstructions"
+                    android:layout_below="@+id/textViewDisplays"
+                    android:layout_alignParentStart="true" />
 
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true" />
+                <Button
+                    android:text="Settings"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/buttonSettings"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="34dp" />
+            </RelativeLayout>
+        </TableRow>
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:ems="10"
-        android:layout_above="@+id/webView"
-        android:layout_alignParentStart="true"
-        android:id="@+id/editTextURL"
-        android:layout_toStartOf="@+id/buttonOK" />
+        <!-- 4 row indicator of output text. -->
+        <TableRow android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="................"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/textToScreen"/>
+            </RelativeLayout>
+        </TableRow>
 
-    <Button
-        android:text="OK"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/buttonURLok"
-        android:layout_above="@+id/webView"
-        android:layout_toEndOf="@+id/editTextURL"
-        android:layout_alignStart="@+id/buttonOK"
-        android:layout_alignTop="@+id/editTextURL" />
+        <!-- 5+6 row webpage. -->
+        <TableRow android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:ems="10"
+                    android:layout_alignParentStart="true"
+                    android:id="@+id/editTextURL" />
 
-</RelativeLayout>
+                <Button
+                    android:text="OK"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/buttonURLok"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_toEndOf="@+id/editTextURL"
+                    android:layout_alignTop="@+id/editTextURL"/>
+           </RelativeLayout>
+       </TableRow>
+        <TableRow android:layout_width="wrap_content" android:layout_height="wrap_content">
+           <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent">
+               <WebView
+                   android:layout_width="fill_parent"
+                   android:layout_height="fill_parent"
+                   android:id="@+id/webView"/>
+           </RelativeLayout>
+       </TableRow>
 
+    </TableLayout>
+</ScrollView>
+
+
+
+<!--
+   <RelativeLayout
+       xmlns:android="http://schemas.android.com/apk/res/android"
+       xmlns:app="http://schemas.android.com/apk/res-auto"
+       xmlns:tools="http://schemas.android.com/tools"
+       android:id="@+id/activity_main"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:paddingLeft="10dp"
+       android:paddingRight="10dp"
+       android:paddingTop="5dp"
+       tools:context="vitali.appnr1.MainActivity">
+
+       <Button
+           android:text="Nr.3"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:id="@+id/button3"
+           android:layout_alignBaseline="@+id/button2"
+           android:layout_alignBottom="@+id/button2"
+           android:layout_toEndOf="@+id/editTextName" />
+
+       <EditText
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:inputType="textPersonName"
+           android:ems="10"
+           android:id="@+id/editTextName"
+           android:hint="Enter your name here"
+           android:layout_below="@+id/textViewBelowHeading"
+           android:layout_alignParentStart="true" />
+
+       <Button
+           android:text="Settings"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:id="@+id/buttonSettings"
+           android:layout_alignBaseline="@+id/buttonInstructions"
+           android:layout_alignBottom="@+id/buttonInstructions"
+           android:layout_alignParentEnd="true"
+           android:layout_toEndOf="@+id/textViewButtons" />
+
+      <Button
+           android:text="OK"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:id="@+id/buttonOK"
+           android:layout_below="@+id/textViewBelowHeading"
+           android:layout_toEndOf="@+id/editTextName"
+           android:layout_alignStart="@+id/imageView" />
+
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="Hello, this is my first APP!"
+           android:textAppearance="@style/TextAppearance.AppCompat.Light.SearchResult.Title"
+           android:id="@+id/textHeadnigMain"
+           android:layout_alignParentTop="true"
+           android:layout_alignParentStart="true"
+           android:layout_toStartOf="@+id/imageView" />
+
+       <TextView
+           android:text="1. Please write your name below, and press OK:"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:id="@+id/textViewBelowHeading"
+           android:layout_below="@+id/textHeadnigMain"
+           android:layout_alignParentStart="true"
+           android:layout_toStartOf="@+id/buttonOK"
+           android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+       <Button
+           android:text="Nr.2"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:id="@+id/button2"
+           android:layout_alignBaseline="@+id/button1"
+           android:layout_alignBottom="@+id/button1"
+           android:layout_centerHorizontal="true" />
+
+       <Button
+           android:text="NR.1"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:id="@+id/button1"
+           android:layout_alignTop="@+id/textViewButtons"
+           android:layout_alignParentStart="true"
+           android:layout_marginTop="17dp" />
+
+       <Button
+           android:text="Instructions"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:id="@+id/buttonInstructions"
+           android:layout_below="@+id/textViewDisplays"
+           android:layout_alignParentStart="true" />
+
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:id="@+id/textToScreen"
+           android:text="................"
+           android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+           android:layout_below="@+id/buttonSettings"
+           android:layout_centerHorizontal="true" />
+
+       <ImageView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           app:srcCompat="@android:drawable/sym_def_app_icon"
+           android:id="@+id/imageView"
+           android:layout_alignParentTop="true"
+           android:layout_alignParentEnd="true" />
+
+       <TextView
+           android:text="3. Displays:"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:id="@+id/textViewDisplays"
+           android:layout_below="@+id/button1"
+           android:layout_alignParentStart="true" />
+
+       <TextView
+           android:text="2. Please click on a button:"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:id="@+id/textViewButtons"
+           android:layout_below="@+id/editTextName"
+           android:layout_alignParentStart="true" />
+
+       <WebView
+           android:layout_width="match_parent"
+           android:layout_height="200px"
+           android:id="@+id/webView"
+
+           android:layout_alignParentBottom="true"
+           android:layout_alignParentEnd="true" />
+
+       <EditText
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:inputType="textPersonName"
+           android:ems="10"
+           android:layout_above="@+id/webView"
+           android:layout_alignParentStart="true"
+           android:id="@+id/editTextURL"
+           android:layout_toStartOf="@+id/buttonOK" />
+
+       <Button
+           android:text="OK"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:id="@+id/buttonURLok"
+           android:layout_above="@+id/webView"
+           android:layout_toEndOf="@+id/editTextURL"
+           android:layout_alignStart="@+id/buttonOK"
+           android:layout_alignTop="@+id/editTextURL" />
+
+   </RelativeLayout>
+-->

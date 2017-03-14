@@ -43,7 +43,20 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         //Web-view initiation.
         webView = (WebView) findViewById(R.id.webView);
-        webView.loadUrl("http://javabog.dk");  //Load a default site.
+        webView.loadUrl("http://javabog.dk");
+/*
+        //Set webview page same size.
+        webView.getSettings().setLoadWithOverviewMode(true);
+        webView.getSettings().setUseWideViewPort(true);
+
+        //Load a default site.
+        try{
+            //Load webpage page.
+            webView.loadUrl("http://javabog.dk");
+        } catch (Exception e){
+            e.printStackTrace();
+        }
+*/
     }
 
     @Override
@@ -58,7 +71,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         //Write out to terminal, the clicked name of the button.
         System.out.println("A button " + ((Button)v).getText().toString() + " has been clicked..\n");
         //Or the same can be done by writing to the intern android log.
-        Log.d("Tag: Click", "Message:OK!");
+        Log.d("Tag: Click", "Message log printed...");
 
         //Get elements by ID, and use them on a even.
         switch (v.getId()) {
@@ -160,13 +173,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
         */
 
-        // Write and use 3 different intents.
+        intentsFunctions();
+    }
 
+    public void intentsFunctions (){
+        // Write and use 3 different intents.
         // The Implicitte intents used in a extern app.
 
         // The Eksplicitte intents used in current app.
-
-
-
     }
+
 }
