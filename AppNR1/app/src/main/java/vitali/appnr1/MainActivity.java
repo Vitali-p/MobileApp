@@ -109,7 +109,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             try{
                 startActivity(new Intent(this, GameActivity.class));
             } catch (ActivityNotFoundException e){
-            Toast.makeText(this, "Executing explicit intent went wrong:\n" + e.getMessage(), Toast.LENGTH_LONG).show();
+                Toast.makeText(this, "Executing explicit intent went wrong:\n" + e.getMessage(), Toast.LENGTH_LONG).show();
         }
         }
         else if (v == IntentButt) {

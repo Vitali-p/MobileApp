@@ -60,6 +60,43 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void updateScreen() {
+        int nrAttempts = 6 - gamelogic.getAntalForkerteBogstaver();
+
+        // Draw the galge.
+        if(nrAttempts == 0) {
+            galgeStatusDiagram.setImageResource(R.drawable.forkert6);
+        }
+        if(nrAttempts == 1) {
+            galgeStatusDiagram.setImageResource(R.drawable.forkert5);
+        }
+        if(nrAttempts == 2) {
+            galgeStatusDiagram.setImageResource(R.drawable.forkert4);
+        }
+        if(nrAttempts == 3) {
+            galgeStatusDiagram.setImageResource(R.drawable.forkert3);
+        }
+        if(nrAttempts == 4) {
+            galgeStatusDiagram.setImageResource(R.drawable.forkert2);
+        }
+        if(nrAttempts == 5) {
+            galgeStatusDiagram.setImageResource(R.drawable.forkert1);
+        }
+        if(nrAttempts == 6) {
+            galgeStatusDiagram.setImageResource(R.drawable.galge);
+        }
+
+        // Function: setText(): Destroys the buffer content by filling the text to be set.
+        // Function: append(): Adds a text to a buffer and then prints the result.
+        txWord.setText(gamelogic.getSynligtOrd());
+        txInfo.setText("Used letters: " + gamelogic.getBrugteBogstaver() + "\nYou have " + nrAttempts + " attempts left.");
+
+        if(gamelogic.erSpilletVundet()){
+            txInfo.append("\nCongrutulation \n!! You WON !!");
+        }
+        if(gamelogic.erSpilletTabt()){
+            txWord.setText("GAME OVER");
+            txInfo.setText("The right word was: " + gamelogic.getOrdet());
+        }
 
     }
 }
