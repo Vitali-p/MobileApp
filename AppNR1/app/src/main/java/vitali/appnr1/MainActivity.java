@@ -13,11 +13,12 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+
 //Implementing on click listener, for interactive app functionality.
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     //Declare global variables, to remember through the methodes. A "field" global variable.
-    Button nr1 = null, nr2 = null, nr3 = null, OK = null, Inst = null, IntentButt = null, OKurl = null;
+    Button nr1 = null, nr2 = null, nr3 = null, OK = null, btGame = null, IntentButt = null, OKurl = null;
     WebView webView;
 
     //Initiation of User Interface of the app.
@@ -32,7 +33,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         nr2 = (Button) findViewById(R.id.button2);
         nr3 = (Button) findViewById(R.id.button3);
         OK = (Button) findViewById(R.id.buttonOK);
-        Inst = (Button) findViewById(R.id.buttonInstructions);
+        btGame = (Button) findViewById(R.id.id_btGame);
         IntentButt = (Button) findViewById(R.id.buttonIntents);
         OKurl = (Button) findViewById(R.id.buttonURLok);
         TextView nameTextEnter = (TextView) findViewById(R.id.editTextName);
@@ -42,7 +43,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         nr2.setOnClickListener(this);
         nr3.setOnClickListener(this);
         OK.setOnClickListener(this);
-        Inst.setOnClickListener(this);
+        btGame.setOnClickListener(this);
         IntentButt.setOnClickListener(this);
         OKurl.setOnClickListener(this);
 
@@ -102,9 +103,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 printToTextView.setText("Welcome " + persName);
             }
         }
-        else if (v == Inst) {
+        else if (v == btGame) {
             //Functionality of button Instructions
-            printToTextView.setText("You have entered; Instructions");
+            printToTextView.setText("You have now entered the game.");
+            try{
+                startActivity(new Intent(this, GameActivity.class));
+            } catch (ActivityNotFoundException e){
+            Toast.makeText(this, "Executing explicit intent went wrong:\n" + e.getMessage(), Toast.LENGTH_LONG).show();
+        }
         }
         else if (v == IntentButt) {
             //Execut an explicit intent.
@@ -130,6 +136,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
 
     }
+
+
+
+
+
+
 
 }
 
