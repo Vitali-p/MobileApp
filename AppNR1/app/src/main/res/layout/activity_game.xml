@@ -4,8 +4,8 @@
     android:layout_height="match_parent">
 
     <ImageView
-        android:layout_width="40dp"
-        android:layout_height="40dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:id="@+id/imageViewGalge"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
@@ -26,11 +26,15 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/textViewGuessWord"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="1dp"
         android:hint="Enter a letter here..."
         android:textAlignment="center"
         android:textSize="14sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:singleLine="true"
+        android:imeOptions="actionDone"
+        android:lines="1"
+        android:inputType="text"/>
 
     <TextView
         android:id="@+id/textViewTypeded"

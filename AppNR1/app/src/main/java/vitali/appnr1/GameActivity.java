@@ -2,9 +2,13 @@ package vitali.appnr1;
 
 
 import android.os.Bundle;
+import android.provider.Settings;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.view.KeyEvent;
 import android.view.View;
+import android.view.View.OnKeyListener;
+import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -12,14 +16,14 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 
-public class GameActivity extends AppCompatActivity implements View.OnClickListener{
+public class GameActivity extends AppCompatActivity implements View.OnClickListener {
 
     Galgelogik gamelogic = new Galgelogik();
 
     private ImageView galgeStatusDiagram;
     private Button btPlay;
     private TextView txInfo, txWord;
-    private EditText txLetter;
+    public EditText txLetter = null;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -40,27 +44,51 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
         // Create listener
         btPlay.setOnClickListener(this);
 
+        txLetter.setFocusableInTouchMode(true);
+        txLetter.requestFocus();
+        txLetter.setOnKeyListener(new OnKeyListener() {
+            @Override
+            public boolean onKey(View v, int keyCode, KeyEvent event) {
+
+                System.out.println("A key had been pressed");
+                if ((event.getAction() == KeyEvent.ACTION_DOWN) && (keyCode == KeyEvent.KEYCODE_ENTER)) {
+                    if(keyCode == KeyEvent.KEYCODE_ENTER){
+
+                        System.out.println("ENTER");
+                        setLetter();
+
+                        return true;
+                    }
+                }
+                return false;
+            }
+        });
+
+
     }
 
     @Override
     public void onClick(View v) {
         if(v == btPlay){
-            String inputLetter = txLetter.getText().toString();
-            if(inputLetter.length() != 1){
-                txLetter.setError("One character allowed!");
-                // Make a visual warning to the user.
-                Toast.makeText(this, "Please write ONE letter at a time!", Toast.LENGTH_LONG).show();
-                return;
-            }
-            txLetter.setError(null);
-            gamelogic.gætBogstav(inputLetter);
-            txLetter.setText("");
-            updateScreen();
+            setLetter ();
         }
     }
 
+    private  void setLetter (){
+        String inputLetter = txLetter.getText().toString();
+        if(inputLetter.length() != 1){
+            txLetter.setError("One character allowed!");
+            // Make a visual warning to the user.
+            Toast.makeText(this, "Please write ONE letter at a time!", Toast.LENGTH_SHORT).show();
+            return;
+        }
+        txLetter.setError(null);
+        gamelogic.gætBogstav(inputLetter);
+        txLetter.setText("");
+        updateScreen();
+    }
     private void updateScreen() {
-        int nrAttempts = 6 - gamelogic.getAntalForkerteBogstaver();
+        int nrAttempts = 7 - gamelogic.getAntalForkerteBogstaver();
 
         // Draw the galge.
         if(nrAttempts == 0) {
@@ -99,4 +127,5 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
         }
 
     }
+
 }
