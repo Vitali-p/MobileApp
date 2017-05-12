@@ -3,30 +3,30 @@
 
     <item
         is-multidex="true"
-        jar="C:\Users\Vitali\.android\build-cache\1f9d1d48df744cd60603fd7c21e44be1170ac384\output\jars\classes.jar"
+        jar="C:\Users\Vitali\.android\build-cache\8ac93d1fff7c0951b6c10b2eb3d5ae4bd95817d7\output\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="c03bf57f358aa10d253f21989e93bcf6014b3b17">
-        <dex dex="C:\Users\Vitali\Desktop\MobileAppDev\AppNR1\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_f596c5383004a11a61804df06bad3f1d2ee8ef95\classes.dex" />
+        sha1="e2719c102dca3a7a5b02ce07f769362da6ddb4ab">
+        <dex dex="C:\Users\Vitali\Desktop\MobileAppDev\AppNR1\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_5b59e6fb6a622c09e0034ad23f8582fa66a3a83c\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\Vitali\.android\build-cache\2140b7424198d2e28862e115128d7f2aa15e9b79\output\jars\classes.jar"
+        jar="C:\Users\Vitali\.android\build-cache\852f33941986d0b9e8f203ecc5990e53776246ab\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="02741d05d4b697fba5e279e9881aaa1da0ca7c7f">
+        <dex dex="C:\Users\Vitali\Desktop\MobileAppDev\AppNR1\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_295d2314fc5af3fb9148c7c284de57b487cbd2c2\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Vitali\.android\build-cache\0ef80b726c89d54be0d3401c7bd37c9e9bbb010e\output\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
         sha1="3e04ac8ca644ea7baddf6fdcf72e15c79e9df94a">
-        <dex dex="C:\Users\Vitali\Desktop\MobileAppDev\AppNR1\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_fe8b1e85f41a2d26f14d92f9af890165c1af892b\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Vitali\.android\build-cache\9b8d87f9c8da7964a130b7cdb97a847f508636b5\output\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
-        <dex dex="C:\Users\Vitali\Desktop\MobileAppDev\AppNR1\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_e54b1cb3d4009221c6e382f0290c2b10e1576a4e\classes.dex" />
+        <dex dex="C:\Users\Vitali\Desktop\MobileAppDev\AppNR1\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_1e43c2e34b27ba9c85d6b6478361178e59a9f959\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -34,17 +34,26 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="c82741bc129dd5f99f11a4ab8666ae24262053b6">
+        sha1="510aa6efc159983dfbffa676a0dae37568c0a46f">
         <dex dex="C:\Users\Vitali\Desktop\MobileAppDev\AppNR1\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_ad021473725a624fd75e176b58517c8e462f6b75\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\Vitali\.android\build-cache\05443fe41c0e4562b9bf7412ab72486c74929264\output\jars\classes.jar"
+        jar="C:\Users\Vitali\.android\build-cache\5409998f7c6f3e756412b1abaf7a034f424a0687\output\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="02741d05d4b697fba5e279e9881aaa1da0ca7c7f">
-        <dex dex="C:\Users\Vitali\Desktop\MobileAppDev\AppNR1\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_70c6eb34341bcaa894ddc352167f8e5ccd585b29\classes.dex" />
+        sha1="7bde4c34162092e0a77e7f12dc85ed77c484cf5c">
+        <dex dex="C:\Users\Vitali\Desktop\MobileAppDev\AppNR1\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_0156482a5be4705b968b3028f46f38a537f99899\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Vitali\.android\build-cache\a09cb54c0312b50d4eaa0ca88581f66bfcd7a437\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="0fb891e8f0cfba0513043a7bb357513d229ca2cd">
+        <dex dex="C:\Users\Vitali\Desktop\MobileAppDev\AppNR1\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_a3c08770c66072a9c5ad7ad2769181f8f2a4e09d\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -52,53 +61,44 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="afa3b0a3d4bcf22a6f3334ac733b2194d1e95353">
+        sha1="5a854750d8afcbbb9e61288ae3cf31d29587ba59">
         <dex dex="C:\Users\Vitali\Desktop\MobileAppDev\AppNR1\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_481f220c670fe16309725329bce702efc99d88f3\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\Vitali\.android\build-cache\548b551cb5484533bcd077ea0c167e9108864edb\output\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="e2719c102dca3a7a5b02ce07f769362da6ddb4ab">
-        <dex dex="C:\Users\Vitali\Desktop\MobileAppDev\AppNR1\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_65303851d7aa5c0bac96052e038c101559028420\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Vitali\.android\build-cache\cba3b15a9381216041ff0571be48328df69b5c6c\output\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="0d191c1a09e4892d059e5ce749e4ad4e08129e35">
-        <dex dex="C:\Users\Vitali\Desktop\MobileAppDev\AppNR1\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_edd2ed2bb63bee0b3cd8e0bed6151af251a1cc42\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Vitali\.android\build-cache\7977310f8a72f4a885716932d58af48917b62e21\output\jars\classes.jar"
+        jar="C:\Users\Vitali\.android\build-cache\018ae76810063df40efd1baf5026f72aaf38412e\output\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
         sha1="ecb496cc08dd52551fc5ec6db3bc0632e95a89bb">
-        <dex dex="C:\Users\Vitali\Desktop\MobileAppDev\AppNR1\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_d64c161f5e766816e80f993415dd0ee899be8aa7\classes.dex" />
+        <dex dex="C:\Users\Vitali\Desktop\MobileAppDev\AppNR1\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_7546557c03f408b74e3cb596e8ac09a822772680\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\Vitali\.android\build-cache\a557fbf7400cf46d05b2dabfa1bac34e5a9221aa\output\jars\classes.jar"
+        jar="C:\Users\Vitali\.android\build-cache\c85eb9d64ba5366390bfae106f45dea75b83c173\output\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="7bde4c34162092e0a77e7f12dc85ed77c484cf5c">
-        <dex dex="C:\Users\Vitali\Desktop\MobileAppDev\AppNR1\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_fc5a4fa490e895889f91e9266fc5214898840a9d\classes.dex" />
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="C:\Users\Vitali\Desktop\MobileAppDev\AppNR1\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_d2b26d91b35049ba5caf4a18989f841063a8f6e8\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\Vitali\.android\build-cache\d096c32817bcd7de624fe398c2d79b24f871c6d7\output\jars\classes.jar"
+        jar="C:\Users\Vitali\.android\build-cache\d5f9f8baeaf0e40813c1ba003900a82340dcbf1b\output\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="0fb891e8f0cfba0513043a7bb357513d229ca2cd">
-        <dex dex="C:\Users\Vitali\Desktop\MobileAppDev\AppNR1\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_4576fffa000d730fc73984cd6e49b70d02764fe4\classes.dex" />
+        sha1="0d191c1a09e4892d059e5ce749e4ad4e08129e35">
+        <dex dex="C:\Users\Vitali\Desktop\MobileAppDev\AppNR1\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_8a6f0630b18134f65d83d568ce11073eeb5ac0d8\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Vitali\.android\build-cache\da55d9d64731bf4c313e8eb9d1190e5967ae23c8\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="c03bf57f358aa10d253f21989e93bcf6014b3b17">
+        <dex dex="C:\Users\Vitali\Desktop\MobileAppDev\AppNR1\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_d026b48bf9b13e56dceb80f27db1ea32287b89f0\classes.dex" />
     </item>
 
 </items>

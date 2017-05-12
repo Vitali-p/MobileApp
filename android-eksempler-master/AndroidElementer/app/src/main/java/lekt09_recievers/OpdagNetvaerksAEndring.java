@@ -58,16 +58,24 @@ public class OpdagNetvaerksAEndring extends Activity implements OnClickListener 
 
   public void onClick(View hvadBlevDerKlikketPå) {
     if (hvadBlevDerKlikketPå == registrer) {
+
       IntentFilter intentFilter = new IntentFilter();
+
       intentFilter.addCategory(Intent.CATEGORY_DEFAULT);
       intentFilter.addAction(ConnectivityManager.CONNECTIVITY_ACTION);
+
       registerReceiver(reciever, intentFilter);
+
       Toast.makeText(this, "Registreret", Toast.LENGTH_LONG).show();
+
     } else if (hvadBlevDerKlikketPå == afregistrer) {
       try {
         unregisterReceiver(reciever);
+
         Toast.makeText(this, "Afregistreret", Toast.LENGTH_LONG).show();
+
       } catch (Exception e) {
+
         Toast.makeText(this, "Fejl: " + e, Toast.LENGTH_LONG).show();
       }
     }
